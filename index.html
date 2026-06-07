@@ -78,14 +78,19 @@
         }
 
         /* 스마트폰 화면(1280px 이하)일 때 작동하는 마법 코드 */
-        @media screen and (max-width: 1280px) {
-            #sidebar { display: none !important; } /* 옛날 사이드바는 완전 숨김 */
-            #mobile-header { display: flex !important; } /* 새 상단 고정바 출동 */
-            #wrapper { padding-top: 60px !important; } /* 상단바에 본문이 가려지지 않게 여백 추가 */
-            
-            /* 스마트폰에서 본문 제목들 가독성 좋게 패딩 조절 */
-            #wrapper section .inner { padding: 3rem 2rem !important; }
-            #intro { height: auto !important; min-height: auto !important; padding: 4rem 2rem !important; }
+@media screen and (max-width: 1280px) {
+    #sidebar { display: none !important; } /* 옛날 사이드바는 완전 숨김 */
+    #mobile-header { display: flex !important; } /* 새 상단 고정바 출동 */
+    #wrapper { padding-top: 60px !important; } /* 상단바에 본문이 가려지지 않게 여백 추가 */
+    
+    /* ★ 중요: 스마트폰 메뉴 누르고 순간이동 할 때 상단 메뉴바 두께만큼 멈춰주는 브레이크 효과 */
+    #wrapper section { 
+        scroll-margin-top: 65px; 
+    }
+    
+    /* 스마트폰에서 본문 제목들 가독성 좋게 패딩 조절 */
+    #wrapper section .inner { padding: 3rem 2rem !important; }
+    #intro { height: auto !important; min-height: auto !important; padding: 4rem 2rem !important; }
         }
 
         /* 대표이사 인사말 시그니처 */
