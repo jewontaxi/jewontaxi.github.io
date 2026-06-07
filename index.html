@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     
-    <title>제원기업 유한회사 - 인천 카카오T · 마이캡 공식 파트너 법인택시</title>
+    <title>제원기업 유한회사 - 인천 택시 카카오콜 · 마이캡 공식 파트너 법인택시</title>
 
     <meta name="description" content="인천 제원기업 유한회사 공식 홈페이지. 카카오콜 및 마이캡 수신 최적화, 인천 법인택시 기사 상시 채용 및 취업 안내.">
 
@@ -57,7 +57,7 @@
             border-radius: 4px;
         }
         #mobile-header .mobile-nav-scroll {
-            overflow-x: auto; /* 메뉴가 많으면 옆으로 부드럽게 밀어서 밀크티처럼 넘겨볼 수 있게 세팅 */
+            overflow-x: auto; /* 메뉴가 많으면 옆으로 부드럽게 밀어서 넘겨볼 수 있게 세팅 */
             white-space: nowrap;
             flex: 1;
             margin-left: 1rem;
@@ -96,7 +96,7 @@
             #mobile-header { display: flex !important; height: 60px !important; } 
             #wrapper { padding-top: 60px !important; } 
 
-            /* 1. 메뉴 순간이동 시 상단바 두께(60px) 바로 밑에 칼정렬 */
+            /* 1. 메뉴 이동 시 상단바 두께(60px) 바로 밑에 칼정렬 */
             #wrapper section { 
                 scroll-margin-top: 60px !important; 
                 min-height: auto !important; 
@@ -151,7 +151,7 @@
         /* 특장점 (Features) 섹션 고정 스케일링 무력화 및 반응형 처리 */
         #features.spotlights-fixed .spotlight-item { display: flex; flex-direction: row; align-items: center; background-color: #494ca2; border-bottom: solid 2px rgba(255, 255, 255, 0.05); }
         #features.spotlights-fixed .image-container { width: 40%; min-width: 30rem; height: 100%; min-height: 23rem; display: flex; align-items: center; justify-content: center; background-color: #3b3d82; padding: 20px; box-sizing: border-box; }
-        #features.spotlights-fixed .image-container img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain !important; display: block; border-radius: 4px; }
+        #features.spotlights-fixed .image-container img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain !important; display: block; border-radius: 4px; background: transparent; }
         #features.spotlights-fixed .content-container { width: 60%; padding: 4rem 4rem 3rem 4rem; }
 
         @media screen and (max-width: 1280px) {
@@ -159,16 +159,6 @@
             #features.spotlights-fixed .image-container { width: 100%; min-width: 100%; padding: 30px; }
             #features.spotlights-fixed .content-container { width: 100%; padding: 3rem 3rem 1rem 3rem; }
         }
-
-        /* 새롭게 추가된 게시판(공지사항) 스타일 */
-        .board-table-wrapper { width: 100%; overflow-x: auto; background: rgba(0, 0, 0, 0.15); border-radius: 6px; padding: 1rem; box-shadow: inset 0 1px 5px rgba(0,0,0,0.2); }
-        .board-table { width: 100%; border-collapse: collapse; margin: 0; text-align: left; }
-        .board-table th, .board-table td { padding: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); font-size: 1.1rem; }
-        .board-table th { font-weight: bold; color: #51c5cf; border-bottom: 2px solid #51c5cf; }
-        .board-table td.board-title { color: #fff; font-weight: 500; }
-        .board-table td.board-date { color: #aaa; text-align: center; width: 15%; }
-        .board-table td.board-no { color: #aaa; text-align: center; width: 10%; }
-        .board-loading { padding: 2rem; text-align: center; color: #aaa; font-style: italic; }
 
         /* 오시는 길 / 연락처 섹션 */
         .map-container { width: 100%; max-width: 1400px; margin: 3rem auto; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; overflow: hidden; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
@@ -204,6 +194,7 @@
 </head>
 <body class="is-preload">
 
+    <!-- 모바일 전용 상단 고정 헤더 -->
     <header id="mobile-header">
         <div class="mobile-logo">
             <img src="images/pic05.jpg" alt="제원기업 로고">
@@ -217,6 +208,7 @@
         </div>
     </header>
 
+    <!-- PC 전용 사이드바 -->
     <section id="sidebar">
         <div class="inner">
             <div class="brand-logo-area">
@@ -236,6 +228,7 @@
 
     <div id="wrapper">
 
+        <!-- 인트로 구역 -->
         <section id="intro" class="wrapper style1 fullscreen fade-up">
             <div class="inner">
                 <h1>제원기업 유한회사</h1>
@@ -245,6 +238,7 @@
             </div>
         </section>
 
+        <!-- 인사말 구역 -->
         <section id="ceo" class="wrapper style1 fullscreen fade-up">
             <div class="inner">
                 <div class="ceo-title-image-wrapper" style="position: relative; width: 100%; margin-bottom: 2rem;">
@@ -255,7 +249,7 @@
                         대표이사 인사말
                     </h2>
                 </div>
-                <h2 style="margin-top: 0; margin-bottom: 1.5rem; line-height: 1.4;">고객의 안전과 편안함을 만들기 위해 노력하고 있는 모빌리티 파트너<br />제원기업입니다.</h2>
+                <h2 style="margin-top: 0; margin-bottom: 1.5rem; line-height: 1.4;">고객의 안전과 편안함을 만들기 위해 노력하고 있는 모빌리티 파트너 제원기업입니다.</h2>
                 <p style="margin-bottom: 1rem;">"제원(諸元)"이라는 사명을 만들어 &nbsp;'모든 부문에서 으뜸이 된다' 라는 신념을 가지고 1993년 부터 달려온 우리 제원기업은<br />급변화하는 시대 속에서도 안으로는 정직과 신뢰를 밖으로는 친절과 서비스 정신을 바탕으로<br />지역사회와 함께 성장하는 기업이 되기 위해 항상 노력하고 있습니다</p>
                 <p style="margin-bottom: 1rem;">제원기업은 단순한 교통수단을 넘어 고객 만족, 신뢰와 감동을 싣고 달리는 모빌리티 파트너가 되겠습니다</p>
                 <p style="margin-bottom: 1rem;">변함없는 관심과 성원을 부탁드리며 모두가 함께하는 행복한 미래를 향해 달려가겠습니다</p>
@@ -269,6 +263,7 @@
             </div>
         </section>
 
+        <!-- 특장점 (제원택시는) 구역 -->
         <section id="features" class="wrapper style2 spotlights-fixed">
             <section class="spotlight-item">
                 <div class="image-container">
@@ -301,6 +296,7 @@
             </section>
         </section>
 
+        <!-- 채용안내 구역 -->
         <section id="recruit" class="wrapper style3 fade-up">
             <div class="inner">
                 <h2 style="margin-top: 0; margin-bottom: 1rem; padding-top: 0;">채용안내</h2>
@@ -347,6 +343,7 @@
             </div>  
         </section>
 
+        <!-- 오시는 길 구역 -->
         <section id="contact" class="wrapper style1 fade-up">
             <div class="inner">
                 <h2 style="margin-top: 0; margin-bottom: 1rem; padding-top: 0;">오시는 길 / 연락처</h2>
@@ -361,8 +358,9 @@
                         <li>
                             <h3>TEL</h3>
                             <span class="info-text" style="font-weight: bold;">032-862-6679</span>
-                            <span>취업문의</span>
-                                    
+                            <span class="tel-wrapper">
+                                <span class="tel-divider">
+                                    <span>취업문의 :</span>
                                     <span class="staff-list">
                                         <strong>김석희 전무 010-3884-1797</strong>
                                         <strong>김현우 상무 010-9044-4573</strong>
@@ -389,6 +387,7 @@
 
     </div>
 
+    <!-- 하단 푸터 -->
     <footer id="footer" class="wrapper style1-alt">
         <div class="inner">
             <div class="footer-wrapper">
@@ -409,6 +408,7 @@
         </div>
     </footer>
 
+    <!-- 기본 스크립트 로드 -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -417,39 +417,10 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <!-- 카카오/다음 지도 로드 -->
     <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
     <script charset="UTF-8">
         new daum.roughmap.Lander({"timestamp" : "1779329606993", "key" : "o5xk5zim2q6", "mapWidth" : "100%", "mapHeight" : "480"}).render();
-    </script>
-
-    <script>
-        $(document).ready(function() {
-            const sheetUrl = "여기에_구글시트_CSV_주소를_넣으세요"; 
-            
-            if(sheetUrl !== "여기에_구글시트_CSV_주소를_넣으세요") {
-                $.ajax({
-                    url: sheetUrl,
-                    dataType: "text",
-                    success: function(data) {
-                        let rows = data.split("\n");
-                        let htmlContent = "";
-                        for (let i = 1; i < rows.length; i++) {
-                            let cells = rows[i].split(",");
-                            if (cells.length >= 3 && cells[1].trim() !== "") {
-                                htmlContent += `<tr>
-                                    <td class="board-no">${cells[0]}</td>
-                                    <td class="board-title">${cells[1]}</td>
-                                    <td class="board-date">${cells[2]}</td>
-                                </tr>`;
-                            }
-                        }
-                        if(htmlContent !== "") {
-                            $("#board-content").html(htmlContent);
-                        }
-                    }
-                });
-            }
-        });
     </script>
 
 </body>
