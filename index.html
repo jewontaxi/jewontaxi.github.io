@@ -77,19 +77,41 @@
             border-bottom: none !important;
         }
 
-       /* 스마트폰 화면(1280px 이하)일 때 작동하는 마법 코드 */
-@media screen and (max-width: 1280px) {
-    #sidebar { display: none !important; } /* 옛날 사이드바는 완전 숨김 */
-    #mobile-header { display: flex !important; } /* 새 상단 고정바 출동 */
-    #wrapper { padding-top: 60px !important; } /* 상단바에 본문이 가려지지 않게 여백 추가 */
-    
-    /* ★ 스마트폰에서 메뉴 누르고 이동 시 제목이 가려지지 않도록 상단 여백(Padding) 강제 추가 */
-    #ceo, #recruit, #contact {
-        padding-top: 5rem !important; /* 위쪽 여백을 대폭 늘려서 상단바 아래로 밀어줍니다 */
-    }
+       /* ==========================================================================
+   [전체 화면 공통] 메뉴바에 제목이 가려지는 현상 완벽 방지 코드
+   ========================================================================== */
 
-    /* 스마트폰에서 본문 제목들 가독성 좋게 패딩 조절 */
-    #wrapper section .inner { padding: 2rem 2rem !important; }
+/* 1. PC와 모바일 전체에서 링크 타고 이동할 때 브라우저가 인식하는 정지선(여백) 확보 */
+#wrapper section {
+    scroll-margin-top: 120px !important;
+}
+
+/* 2. 각 페이지 안쪽 본문 상자의 위쪽 여백을 넉넉하게 주어 아래로 강제 렌더링 */
+#wrapper section .inner {
+    padding-top: 8rem !important;   /* 기본 여백보다 위쪽을 대폭 늘려서 상단바 아래로 노출시킵니다. */
+    padding-bottom: 5rem !important;
+}
+
+/* 3. 대표이사 인사말 이미지 상단 글자(대표이사 인사말)가 가려지지 않도록 추가 조절 */
+#ceo .inner {
+    padding-top: 9rem !important;
+}
+
+/* 스마트폰(모바일) 전용 미세 조정 구역 */
+@media screen and (max-width: 1280px) {
+    #sidebar { display: none !important; } 
+    #mobile-header { display: flex !important; } 
+    #wrapper { padding-top: 60px !important; } 
+    
+    /* 스마트폰에서는 글씨와 여백을 살짝 콤팩트하게 만들되, 가려지지는 않게 설정 */
+    #wrapper section .inner { 
+        padding-top: 6rem !important; 
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+    #ceo .inner {
+        padding-top: 7rem !important;
+    }
     #intro { height: auto !important; min-height: auto !important; padding: 4rem 2rem !important; }
 }
 
